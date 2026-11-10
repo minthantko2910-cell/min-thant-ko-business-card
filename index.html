@@ -1,73 +1,139 @@
 
+
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Min Thant Ko | Digital Business Card</title>
+
 <style>
+
 *{box-sizing:border-box}
+
 body{
- margin:0;padding:25px 16px;
+
+ margin:0;padding:28px 16px;
+
  background:#101010;color:#fff;
+
  font-family:Arial,sans-serif;
+
 }
+
 .card{
+
  max-width:420px;margin:auto;
+
  background:linear-gradient(145deg,#292319,#111);
+
  border:1px solid #b99a54;
+
  border-radius:22px;padding:28px 22px;
+
  text-align:center;
+
+ box-shadow:0 10px 35px #000;
+
 }
-h1{color:#e6c477;font-size:27px}
+
+.photo{
+
+ width:145px;height:145px;border-radius:50%;
+
+ object-fit:cover;border:3px solid #d5b46b;
+
+ margin:10px auto 18px;
+
+}
+
+h1{color:#e6c477;font-size:27px;margin:8px 0}
+
 .role{color:#d7b66c;letter-spacing:2px}
+
 hr{border:0;border-top:1px solid #8e7139;margin:25px 0}
+
 p{color:#ddd;line-height:1.6}
-a.btn,button{
+
+.btn{
+
  display:block;width:100%;padding:15px;
+
  margin:12px 0;border-radius:12px;
+
  background:#d5b46b;color:#17120a;
+
  text-decoration:none;font-weight:bold;
- border:0;font-size:16px;
+
 }
+
+.btn.dark{background:#292319;color:#e6c477;border:1px solid #b99a54}
+
 .footer{color:#b99a54;font-size:12px;margin-top:25px}
+
 </style>
+
 </head>
+
 <body>
+
 <div class="card">
+
+<img class="photo" src="min-profile-photo-new.jpg" alt="Min Thant Ko">
+
 <h1>MIN THANT KO</h1>
-<div class="role">MIN · BISTRO MANAGER</div>
+
+<div class="role">BISTRO MANAGER</div>
+
+<p>YnT Bistro | Singapore</p>
+
 <hr>
-<p>Welcome to my digital business card.</p>
 
-<a class="btn" href="https://wa.me/6584132637">WhatsApp</a>
-<a class="btn" href="https://www.facebook.com/share/19fyfqS8aJ/?mibextid=wwXIfr">Facebook</a>
-<a class="btn" href="https://instagram.com/minthantko2910">Instagram</a>
-<a class="btn" href="mailto:minthantko2910@gmail.com">Email Me</a>
-<a class="btn" href="https://share.google/mnMr9814y7W8UuLvn">Review YnT Bistro</a>
+<p>Welcome to my digital business card.<br>
 
-<button onclick="saveContact()">Save My Contact</button>
+Let's connect and stay in touch.</p>
+
+<a class="btn" href="tel:+6584132637">📞 Call Me</a>
+
+<a class="btn" href="https://wa.me/6584132637">WhatsApp Me</a>
+
+<a class="btn dark" href="https://www.facebook.com/share/1A">Facebook</a>
+
+<a class="btn dark" href="https://share.google/mnMr9814y7W8UuLvn">⭐ Google Review – YnT Bistro</a>
+
+<a class="btn" href="javascript:void(0)" onclick="
+
+const vcard='BEGIN:VCARD\nVERSION:3.0\nFN:Min Thant Ko\nTEL;TYPE=CELL:+6584132637\nORG:YnT Bistro\nEND:VCARD';
+
+const blob=new Blob([vcard],{type:'text/vcard'});
+
+const url=URL.createObjectURL(blob);
+
+const a=document.createElement('a');
+
+a.href=url;a.download='Min-Thant-Ko.vcf';a.click();
+
+URL.revokeObjectURL(url);
+
+">📇 SAVE CONTACT</a>
+
+<hr>
 
 <div class="footer">
-MIN THANT KO · SINGAPORE<br>
-CONNECT WITH ME
+
+PERSONAL DIGITAL BUSINESS CARD<br>
+
+MIN THANT KO © 2026
+
 </div>
+
 </div>
-<script>
-function saveContact(){
- const vcard=`BEGIN:VCARD
-VERSION:3.0
-FN:Min Thant Ko
-TITLE:Bistro Manager
-TEL;TYPE=CELL:+6584132637
-EMAIL:minthantko2910@gmail.com
-END:VCARD`;
- const blob=new Blob([vcard],{type:"text/vcard"});
- const url=URL.createObjectURL(blob);
- const a=document.createElement("a");
- a.href=url;a.download="Min-Thant-Ko.vcf";
- a.click();URL.revokeObjectURL(url);
-}
-</script>
+
 </body>
+
 </html>
